@@ -1,3 +1,3 @@
-from .bybit_client import BybitClient
+from .adapters.bybit import BybitClient
 
 __all__ = ["BybitClient"]

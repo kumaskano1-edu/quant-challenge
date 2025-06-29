@@ -27,6 +27,7 @@ class BybitClient:
         delta_prev = bids_prev[:, 1].sum() - asks_prev[:, 1].sum() if bids_prev.size and asks_prev.size else 0.0
         delta_new = bids_new[:, 1].sum() - asks_new[:, 1].sum() if bids_new.size and asks_new.size else 0.0
         return float(delta_new - delta_prev)
+    
 
     async def close(self) -> None:
         """Закрываем сессию aiohttp."""
